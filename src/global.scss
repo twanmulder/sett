@@ -1,0 +1,140 @@
+:root {
+  height: 100%;
+  overflow-x: hidden;
+
+  --prettyColor: #0074fe;
+  --prettyColorRGB: 0, 116, 254;
+  --bodyBackgroundColor: hsl(213, 100%, 99%);
+  --bodyFontFamily: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --bodyFontColor: #1a202c;
+  --bodyFontColorLight: #fff;
+  --buttonBackgroundColor: #1a202c;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#root {
+  overflow: hidden;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1.5;
+  color: var(--bodyFontColor);
+  font-family: var(--bodyFontFamily);
+  background-color: var(--bodyBackgroundColor);
+}
+
+a {
+  text-decoration: none;
+  color: var(--bodyFontColor);
+
+  :hover {
+    --bodyFontColor: var(--prettyColor);
+  }
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  min-width: 70px;
+  color: #fff;
+  font-family: var(--bodyFontFamily);
+  font-size: 13.333px;
+  font-weight: 400;
+  background: var(--buttonBackgroundColor);
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  --buttonBackgroundColor: var(--prettyColor);
+}
+
+.button--accent {
+  --buttonBackgroundColor: var(--prettyColor);
+}
+
+.button--accent:hover {
+  --buttonBackgroundColor: #0067e6;
+}
+
+.button--invert {
+  --buttonBackgroundColor: #fff;
+  color: var(--prettyColor);
+}
+
+.button--invert:hover {
+  --buttonBackgroundColor: rgba(255, 255, 255, 0.8);
+  color: #1a81ff;
+}
+
+.button--ghost {
+  color: var(--buttonBackgroundColor);
+  background-color: transparent;
+  border: 1px solid var(--buttonBackgroundColor);
+}
+
+.button svg {
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+  vertical-align: middle;
+
+  path,
+  rect {
+    fill: #fff;
+  }
+}
+
+.plan-lead {
+  margin: 0 0 1.25rem;
+  color: currentcolor;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.6;
+}
+
+.plan-features {
+  font-size: 1rem;
+  list-style: none;
+  margin: 0px 0px 2rem;
+  padding: 0px;
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    p {
+      margin: 0 0 0 1rem;
+    }
+  }
+
+  .plan-svg-wrapper {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .svg-icon--cross {
+    color: #ccc;
+  }
+}

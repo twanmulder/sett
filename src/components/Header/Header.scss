@@ -1,0 +1,32 @@
+header {
+  max-width: 70rem;
+  padding: 1rem 1rem 0;
+  margin: 0 auto;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  > div {
+    text-align: right;
+    padding-right: 0.75rem;
+    font-size: 13.333px;
+  }
+
+  nav {
+    padding: 1rem 0;
+    display: flex;
+    justify-content: flex-end;
+
+    a:first-child {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-right: auto;
+    }
+
+    .button {
+      margin-left: 1rem;
+    }
+  }
+}
