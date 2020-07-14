@@ -5,9 +5,6 @@ import "./Header.scss"
 function Header() {
   return (
     <header>
-      <div>
-        <a href="/login">Login</a>
-      </div>
       <nav>
         <a href="index.html">SETT</a>
         <a class="button button--ghost" href="/demo">
