@@ -6,7 +6,7 @@ function Header() {
   return (
     <header>
       <div>
-        <a href="#">Login</a>
+        <a href="/login">Login</a>
       </div>
       <nav>
         <a href="index.html">SETT</a>
