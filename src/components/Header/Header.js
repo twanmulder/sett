@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 import "./Header.scss"
 
@@ -7,9 +8,9 @@ function Header() {
     <header>
       <nav>
         <a href="index.html">SETT</a>
-        <a class="button button--ghost" href="/demo">
+        <Link to="/app" className="button button--ghost">
           Free demo
-        </a>
+        </Link>
         <a class="button" href="/app">
           Go pro
         </a>

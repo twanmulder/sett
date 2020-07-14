@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "./Footer.scss"
 
 import imgBannerVisual from "../../assets/banner-visual.png"
@@ -10,7 +11,7 @@ function Footer() {
         <path fill="var(--bodyBackgroundColor)" d="M0 192l120-5.3c120-5.7 360-15.7 600-16 240 .3 480 10.3 600 16l120 5.3V0H0z"></path>
       </svg>
 
-      <a className="product-banner" href="/demo/">
+      <Link to="/app" className="product-banner">
         <div className="product-banner__content">
           <div className="product-banner__headline">Excited to try SETT out?</div>
           <div clasName="product-banner__subline">Create your FREE bannerset right now! →</div>
@@ -18,7 +19,7 @@ function Footer() {
         <div className="product-banner__media">
           <img className="product-banner__image" alt="" src={imgBannerVisual} />
         </div>
-      </a>
+      </Link>
 
       <section className="footer-links">
         <div className="footer-links__company">

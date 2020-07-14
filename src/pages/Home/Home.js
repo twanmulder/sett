@@ -1,4 +1,5 @@
 import React, { Fragment } from "react"
+import { Link } from "react-router-dom"
 import "./Home.scss"
 
 import Header from "../../components/Header/Header"
@@ -27,9 +28,9 @@ function Home() {
             </em>
           </h1>
           <p>No code, no struggle, no worries. Create a template in just seconds!</p>
-          <a className="button" href="/demo">
+          <Link to="app" className="button">
             Try for free
-          </a>
+          </Link>
         </article>
       </section>
 
@@ -215,9 +216,9 @@ function Home() {
                 </li>
               </ul>
             </div>
-            <a className="button button--accent" href="/demo/">
+            <Link to="/app" className="button button--accent">
               Try for free
-            </a>
+            </Link>
           </div>
           <div className="plan-wrapper plan-wrapper--pro">
             <div>
