@@ -1,16 +1,11 @@
 import React from "react"
-import {
-  BrowserRouter,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom"
 
 import App from "./pages/App"
 import Home from "./pages/Home"
 
 function Router() {
-  return ( 
+  return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
@@ -22,8 +17,8 @@ function Router() {
         <Route>
           <Redirect to="/" />
         </Route>
-    </Switch>
-  </BrowserRouter>
+      </Switch>
+    </BrowserRouter>
   )
 }
 
