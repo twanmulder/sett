@@ -9,7 +9,7 @@ import Footer from "../../components/Footer/Footer"
 
 function Login() {
   const history = useHistory()
-  const responseGoogleSuccess = (response) => {
+  const responseGoogleSuccess = () => {
     history.push("/app")
   }
 
