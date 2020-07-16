@@ -1,5 +1,6 @@
 import React from "react"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useHistory } from "react-router-dom"
+import { GoogleLogout } from "react-google-login"
 
 import "./Header.scss"
 
@@ -9,6 +10,11 @@ function Header() {
     isOnAppPage = true
   }
 
+  const history = useHistory()
+  const logout = () => {
+    history.push("/")
+  }
+
   return (
     <header>
       <nav>
@@ -16,6 +22,16 @@ function Header() {
         <Link to="/login" className="button button--text">
           Login
         </Link>
+
+        <GoogleLogout
+          clientId="951357187081-ln78srsnuhgb3k4j287jhbuita5aiape.apps.googleusercontent.com"
+          render={(renderProps) => (
+            <a onClick={renderProps.onClick} disabled={renderProps.disabled} className="button button--text">
+              Log out
+            </a>
+          )}
+          onLogoutSuccess={logout}
+        />
 
         {!isOnAppPage && (
           <Link to="/app" className="button button--ghost">
