@@ -20,7 +20,7 @@ function Header() {
       <nav>
         <Link to="/">SETT</Link>
         <Link to="/login" className="button button--text">
-          Login
+          Log in
         </Link>
 
         <GoogleLogout
