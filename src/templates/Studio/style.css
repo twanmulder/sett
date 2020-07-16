@@ -1,0 +1,26 @@
+body,
+body * {
+  vertical-align: baseline;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  position: relative;
+  width: {{width}}px;
+  height: {{height}}px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

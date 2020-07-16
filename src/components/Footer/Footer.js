@@ -14,7 +14,7 @@ function Footer() {
       <Link to="/app" className="product-banner">
         <div className="product-banner__content">
           <div className="product-banner__headline">Excited to try SETT out?</div>
-          <div clasName="product-banner__subline">Create your FREE bannerset right now! →</div>
+          <div className="product-banner__subline">Create your FREE bannerset right now! →</div>
         </div>
         <div className="product-banner__media">
           <img className="product-banner__image" alt="" src={imgBannerVisual} />

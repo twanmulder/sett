@@ -60,8 +60,8 @@ function Home() {
           <h2>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5.0333 14.8284L6.44751 16.2426L10.6902 12L6.44751 7.75733L5.0333 9.17155L7.86172 12L5.0333 14.8284Z" fill="currentColor" />
-              <path class="blink" d="M15 14H11V16H15V14Z" fill="currentColor" />
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M2 2C0.895431 2 0 2.89543 0 4V20C0 21.1046 0.89543 22 2 22H22C23.1046 22 24 21.1046 24 20V4C24 2.89543 23.1046 2 22 2H2ZM22 4H2L2 20H22V4Z" fill="currentColor" />
+              <path className="blink" d="M15 14H11V16H15V14Z" fill="currentColor" />
+              <path fillRule="evenodd" clipRule="evenodd" d="M2 2C0.895431 2 0 2.89543 0 4V20C0 21.1046 0.89543 22 2 22H22C23.1046 22 24 21.1046 24 20V4C24 2.89543 23.1046 2 22 2H2ZM22 4H2L2 20H22V4Z" fill="currentColor" />
             </svg>
             Developers first
           </h2>
@@ -84,8 +84,8 @@ function Home() {
             <path d="M10 10C10 10.5523 9.55228 11 9 11C8.44772 11 8 10.5523 8 10C8 9.44771 8.44772 9 9 9C9.55228 9 10 9.44771 10 10Z" fill="currentColor" />
             <path d="M15 11C15.5523 11 16 10.5523 16 10C16 9.44771 15.5523 9 15 9C14.4477 9 14 9.44771 14 10C14 10.5523 14.4477 11 15 11Z" fill="currentColor" />
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12ZM20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
               fill="currentColor"
             />
@@ -181,35 +181,35 @@ function Home() {
               <ul className="plan-features">
                 <li>
                   <div className="plan-svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="svg-icon">
-                      <path fill="transparent" d="M17 8.5l-7 7-3-3" stroke-width="2" stroke="var(--svg-icon-tint)" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                     </svg>
                   </div>
                   <p>Banner template generator</p>
                 </li>
                 <li>
                   <div className="plan-svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" class="svg-icon svg-icon--cross">
-                      <path d="M 9 2 L 2 9.5" fill="transparent" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray=""></path>
-                      <path d="M 9 9.5 L 2 2" fill="transparent" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray=""></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" className="svg-icon svg-icon--cross">
+                      <path d="M 9 2 L 2 9.5" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
+                      <path d="M 9 9.5 L 2 2" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
                     </svg>
                   </div>
                   <p>Add custom formats</p>
                 </li>
                 <li>
                   <div className="plan-svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" class="svg-icon svg-icon--cross">
-                      <path d="M 9 2 L 2 9.5" fill="transparent" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray=""></path>
-                      <path d="M 9 9.5 L 2 2" fill="transparent" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray=""></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" className="svg-icon svg-icon--cross">
+                      <path d="M 9 2 L 2 9.5" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
+                      <path d="M 9 9.5 L 2 2" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
                     </svg>
                   </div>
                   <p>Import scripts via CDN</p>
                 </li>
                 <li>
                   <div className="plan-svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" class="svg-icon svg-icon--cross">
-                      <path d="M 9 2 L 2 9.5" fill="transparent" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray=""></path>
-                      <path d="M 9 9.5 L 2 2" fill="transparent" stroke-width="2" stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray=""></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" className="svg-icon svg-icon--cross">
+                      <path d="M 9 2 L 2 9.5" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
+                      <path d="M 9 9.5 L 2 2" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
                     </svg>
                   </div>
                   <p>Custom project name</p>
@@ -232,32 +232,32 @@ function Home() {
               <ul className="plan-features">
                 <li>
                   <div className="plan-svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="svg-icon">
-                      <path fill="transparent" d="M17 8.5l-7 7-3-3" stroke-width="2" stroke="var(--svg-icon-tint)" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                     </svg>
                   </div>
                   <p>Banner template generator</p>
                 </li>
                 <li>
                   <div className="plan-svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="svg-icon">
-                      <path fill="transparent" d="M17 8.5l-7 7-3-3" stroke-width="2" stroke="var(--svg-icon-tint)" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                     </svg>
                   </div>
                   <p>Add custom formats</p>
                 </li>
                 <li>
                   <div className="plan-svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="svg-icon">
-                      <path fill="transparent" d="M17 8.5l-7 7-3-3" stroke-width="2" stroke="var(--svg-icon-tint)" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                     </svg>
                   </div>
                   <p>Import scripts via CDN</p>
                 </li>
                 <li>
                   <div className="plan-svg-wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="svg-icon">
-                      <path fill="transparent" d="M17 8.5l-7 7-3-3" stroke-width="2" stroke="var(--svg-icon-tint)" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                     </svg>
                   </div>
                   <p>Custom project name</p>

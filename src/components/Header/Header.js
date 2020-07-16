@@ -1,19 +1,31 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 import "./Header.scss"
 
 function Header() {
+  let isOnAppPage = false
+  if (useLocation().pathname === "/app") {
+    isOnAppPage = true
+  }
+
   return (
     <header>
       <nav>
-        <a href="index.html">SETT</a>
-        <Link to="/app" className="button button--ghost">
-          Free demo
+        <Link to="/">SETT</Link>
+        <Link to="/login" className="button button--text">
+          Login
         </Link>
-        <a class="button" href="/app">
+
+        {!isOnAppPage && (
+          <Link to="/app" className="button button--ghost">
+            Free demo
+          </Link>
+        )}
+
+        <Link className="button" to="/go-pro">
           Go pro
-        </a>
+        </Link>
       </nav>
     </header>
   )

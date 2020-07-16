@@ -58,28 +58,40 @@ a {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-}
 
-.button:hover {
-  --buttonBackgroundColor: var(--prettyColor);
+  &:hover {
+    --buttonBackgroundColor: var(--prettyColor);
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 0 auto;
+    vertical-align: middle;
+
+    path,
+    rect {
+      fill: #fff;
+    }
+  }
 }
 
 .button--accent {
   --buttonBackgroundColor: var(--prettyColor);
-}
 
-.button--accent:hover {
-  --buttonBackgroundColor: #0067e6;
+  &:hover {
+    --buttonBackgroundColor: #0067e6;
+  }
 }
 
 .button--invert {
   --buttonBackgroundColor: #fff;
   color: var(--prettyColor);
-}
 
-.button--invert:hover {
-  --buttonBackgroundColor: rgba(255, 255, 255, 0.8);
-  color: #1a81ff;
+  &:hover {
+    --buttonBackgroundColor: rgba(255, 255, 255, 0.8);
+    color: #1a81ff;
+  }
 }
 
 .button--ghost {
@@ -88,15 +100,15 @@ a {
   border: 1px solid var(--buttonBackgroundColor);
 }
 
-.button svg {
-  width: 16px;
-  height: 16px;
-  margin: 0 auto;
-  vertical-align: middle;
+.button--text {
+  background-color: transparent;
+  border: none;
+  padding: 8px 16px;
+  color: var(--buttonBackgroundColor);
+  font-size: 13.333px;
 
-  path,
-  rect {
-    fill: #fff;
+  &:hover {
+    color: var(--prettyColor);
   }
 }
 
