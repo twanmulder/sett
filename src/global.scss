@@ -66,6 +66,7 @@ a {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+  transition: all 0.15s;
 
   &:hover {
     --buttonBackgroundColor: var(--prettyColor);
