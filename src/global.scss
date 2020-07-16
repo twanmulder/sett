@@ -66,7 +66,7 @@ a {
   border: none;
   border-radius: 2rem;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.1s;
 
   &:hover {
     --buttonBackgroundColor: var(--prettyColor);
@@ -106,7 +106,7 @@ a {
 .button--ghost {
   color: var(--buttonBackgroundColor);
   background-color: transparent;
-  border: 1px solid var(--buttonBackgroundColor);
+  box-shadow: inset 0px 0px 0px 1px;
 }
 
 .button--text {
