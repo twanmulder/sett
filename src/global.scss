@@ -19,6 +19,9 @@
 
 #root {
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
 }
 
 html,
@@ -34,6 +37,10 @@ body {
   color: var(--bodyFontColor);
   font-family: var(--bodyFontFamily);
   background-color: var(--bodyBackgroundColor);
+}
+
+main {
+  flex: 1;
 }
 
 a {

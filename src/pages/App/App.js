@@ -6,7 +6,9 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <h1>Dit is de App</h1>
+      <main>
+        <h1>Dit is de App</h1>
+      </main>
     </Fragment>
   )
 }
