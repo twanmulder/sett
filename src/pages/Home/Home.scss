@@ -47,7 +47,7 @@ section > h2 svg {
 
 .section--hero article p {
   margin-bottom: 2rem;
-  color: #53668d;
+  color: var(--prettyColorShade);
 }
 
 .section--hero article a.button {
@@ -71,7 +71,7 @@ section > h2 svg {
 }
 
 .about-heading h3 {
-  color: #53668d;
+  color: var(--prettyColorShade);
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5rem;
