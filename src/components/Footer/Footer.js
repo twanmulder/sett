@@ -30,13 +30,15 @@ function Footer() {
         </div>
         <div className="footer-links__about">
           <div>
-            <a href="/tos">Terms of Service</a>
-            <a href="/privacy">Privacy Policy</a>
+            <Link to="/tos">Terms of Service</Link>
+            <Link to="/privacy">Privacy Policy</Link>
           </div>
         </div>
         <div className="footer-links__logo">
           <span>Built by me, </span>
-          <a href="https://twitter.com/toktoktwan">Twan</a>
+          <a href="https://twitter.com/toktoktwan" target="_blank" rel="noreferrer noopener">
+            Twan
+          </a>
         </div>
       </section>
     </footer>

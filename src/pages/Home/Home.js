@@ -264,9 +264,9 @@ function Home() {
                 </li>
               </ul>
             </div>
-            <a className="button button--invert" href="/app/">
+            <Link to="/go-pro" className="button button--invert">
               Go pro
-            </a>
+            </Link>
           </div>
         </article>
       </section>
