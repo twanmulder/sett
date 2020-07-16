@@ -112,6 +112,26 @@ a {
   }
 }
 
+.button--google {
+  font-size: 1rem;
+
+  span {
+    margin-right: 0.5rem;
+  }
+
+  svg {
+    width: inherit;
+    height: inherit;
+
+    &:first-child {
+      margin-right: 0.5rem;
+    }
+    &:nth-child(2) {
+      margin-left: 0.25rem;
+    }
+  }
+}
+
 .plan-lead {
   margin: 0 0 1.25rem;
   color: currentcolor;

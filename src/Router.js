@@ -1,8 +1,9 @@
 import React, { useEffect } from "react"
 import { BrowserRouter, Switch, Route, Redirect, useLocation } from "react-router-dom"
 
-import App from "./pages/App/App"
 import Home from "./pages/Home/Home"
+import App from "./pages/App/App"
+import Login from "./pages/Login/Login"
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -19,12 +20,9 @@ function Router() {
     <BrowserRouter>
       <ScrollToTop />
       <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/app">
-          <App />
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/app" component={App} />
+        <Route exact path="/login" component={Login} />
         <Route>
           <Redirect to="/" />
         </Route>
