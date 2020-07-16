@@ -1,0 +1,42 @@
+.main--login {
+  display: flex;
+
+  section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h2 {
+      line-height: 1.25;
+      font-size: 34px;
+      margin-bottom: 0.5rem;
+      margin: 0;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      color: #53668d;
+      font-size: 14px;
+      max-width: 350px;
+    }
+
+    button {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .main--login {
+    section {
+      h2 {
+        font-size: 41px;
+      }
+    }
+  }
+}

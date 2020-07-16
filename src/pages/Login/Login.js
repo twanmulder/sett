@@ -20,8 +20,10 @@ function Login() {
   return (
     <Fragment>
       <Header />
-      <main>
-        <section className="section--login">
+      <main className="main--login">
+        <section>
+          <h2>Login</h2>
+          <p>Your information is private and secure. SETT only stores your name, email, and profile photo.</p>
           <GoogleLogin
             clientId="951357187081-ln78srsnuhgb3k4j287jhbuita5aiape.apps.googleusercontent.com"
             render={(renderProps) => (
