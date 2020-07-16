@@ -26,9 +26,9 @@ function Header() {
         <GoogleLogout
           clientId="951357187081-ln78srsnuhgb3k4j287jhbuita5aiape.apps.googleusercontent.com"
           render={(renderProps) => (
-            <a onClick={renderProps.onClick} disabled={renderProps.disabled} className="button button--text">
+            <button onClick={renderProps.onClick} disabled={renderProps.disabled} className="button button--text">
               Log out
-            </a>
+            </button>
           )}
           onLogoutSuccess={logout}
         />
