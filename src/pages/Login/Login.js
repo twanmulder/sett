@@ -9,7 +9,11 @@ import Footer from "../../components/Footer/Footer"
 
 function Login() {
   const history = useHistory()
-  const responseGoogleSuccess = () => {
+  const responseGoogleSuccess = (response) => {
+    const userObject = {
+      username: response.profileObj.name,
+    }
+    localStorage.setItem("user", JSON.stringify(userObject))
     history.push("/app")
   }
 
