@@ -272,7 +272,7 @@ function Home() {
           </article>
         </section>
       </main>
-      <Footer />
+      <Footer showBanner="true" />
     </Fragment>
   )
 }

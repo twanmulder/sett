@@ -4,22 +4,26 @@ import "./Footer.scss"
 
 import imgBannerVisual from "../../assets/banner-visual.png"
 
-function Footer() {
+function Footer(props) {
+  const showBanner = props.showBanner
+
   return (
-    <footer>
+    <footer className={showBanner ? "footer--product-banner" : ""}>
       <svg viewBox="0 100 1440 200">
         <path fill="var(--bodyBackgroundColor)" d="M0 192l120-5.3c120-5.7 360-15.7 600-16 240 .3 480 10.3 600 16l120 5.3V0H0z"></path>
       </svg>
 
-      <Link to="/app" className="product-banner">
-        <div className="product-banner__content">
-          <div className="product-banner__headline">Excited to try SETT out?</div>
-          <div className="product-banner__subline">Create your FREE bannerset right now! →</div>
-        </div>
-        <div className="product-banner__media">
-          <img className="product-banner__image" alt="" src={imgBannerVisual} />
-        </div>
-      </Link>
+      {showBanner && (
+        <Link to="/app" className="product-banner">
+          <div className="product-banner__content">
+            <div className="product-banner__headline">Excited to try SETT out?</div>
+            <div className="product-banner__subline">Create your FREE bannerset right now! →</div>
+          </div>
+          <div className="product-banner__media">
+            <img className="product-banner__image" alt="" src={imgBannerVisual} />
+          </div>
+        </Link>
+      )}
 
       <section className="footer-links">
         <div className="footer-links__company">

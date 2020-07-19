@@ -1,7 +1,7 @@
 footer {
-  margin-top: 8rem;
+  margin-top: 4rem;
   position: relative;
-  padding: 0 1rem 2rem;
+  padding: 2rem 1rem 2rem;
   background: linear-gradient(180deg, #0074fe 20.47%, #004599 50.63%, #001733 100%);
 
   svg {
@@ -10,6 +10,14 @@ footer {
     left: 0;
     width: 100%;
     pointer-events: none;
+  }
+}
+
+footer.footer--product-banner {
+  padding: 0 1rem 2rem;
+
+  .footer-links {
+    padding-bottom: 2rem;
   }
 }
 
@@ -26,8 +34,6 @@ footer {
 
   display: flex;
   align-items: center;
-
-  transform: translateY(-1rem);
 
   &:hover {
     .product-banner__media {
@@ -78,7 +84,7 @@ footer {
 
 .footer-links {
   padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
   color: var(--bodyFontColorLight);
 
   a {
@@ -145,7 +151,7 @@ footer {
   }
 
   .footer-links {
-    padding-top: 4rem;
+    padding-top: 7rem;
     display: flex;
     align-items: center;
 
@@ -166,6 +172,12 @@ footer {
           }
         }
       }
+    }
+  }
+
+  footer.footer--product-banner {
+    .footer-links {
+      padding-top: 4rem;
     }
   }
 }
