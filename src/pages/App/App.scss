@@ -1,0 +1,243 @@
+#root {
+  display: block;
+}
+
+main {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 4rem 1rem 0;
+}
+
+aside {
+  margin-left: -15rem;
+  margin-right: 2rem;
+  padding-top: 5rem;
+}
+
+aside section {
+  top: 1rem;
+  position: sticky;
+  padding: 0.75rem;
+  background-color: var(--prettyColor);
+  color: #fff;
+  font-size: 13.333px;
+  font-weight: 400;
+  border-radius: 0.5rem;
+}
+
+aside section p {
+  margin: 0;
+}
+
+aside section p:first-child {
+  font-weight: 700;
+}
+
+aside section a.button {
+  display: block;
+  text-align: center;
+}
+
+aside section .logout-button {
+  cursor: pointer;
+  text-align: right;
+  text-decoration: underline;
+}
+
+aside section .logout-button:hover {
+  opacity: 0.8;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 4.5rem;
+}
+
+form {
+  padding-bottom: 10rem;
+
+  .button {
+    text-transform: none;
+  }
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  padding: 8px 12px;
+  background-color: var(--prettyColor);
+  color: #fff;
+  font-size: 13.333px;
+  font-weight: 400;
+  border-radius: 4px;
+}
+
+legend + span {
+  margin-left: 12px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.step {
+  border-radius: 1rem;
+  margin: 2rem 0;
+  padding: 1rem 1rem;
+  background: #fff;
+  color: var(--bodyFontColor);
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.step--4 {
+  margin: 2rem 0 1rem;
+}
+
+.-hidden {
+  --prettyColor: #e8e8e8;
+  --prettyColorRGB: #e8e8e8;
+  --buttonBackgroundColor: #e8e8e8;
+  --bodyFontColor: #ccc;
+  filter: blur(10px);
+  box-shadow: none;
+
+  pointer-events: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.format-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.format-wrapper div:nth-child(2) p:first-child {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.format-wrapper div:nth-child(2) div {
+  display: flex;
+  justify-content: flex-end;
+  width: 55%;
+}
+
+.format-wrapper div:nth-child(2) div label {
+  margin-right: auto;
+}
+
+.format-wrapper div:nth-child(2) div span {
+  margin-left: 8px;
+}
+
+input[type="radio" i] {
+  margin: 9px 9px 0px 15px;
+}
+
+input[type="checkbox" i] {
+  margin: 9px 9px 9px 12px;
+}
+
+input[type="number" i] {
+  width: 4rem;
+}
+
+input[type="text" i],
+input[type="number" i],
+input[type="email" i] {
+  margin: 0;
+  border: none;
+  border-bottom: 1px solid #e1e2e5;
+}
+
+input[type="text" i]:focus,
+input[type="number" i]:focus,
+input[type="email" i]:focus {
+  outline: none;
+  border-color: var(--prettyColor);
+}
+
+form .button:hover {
+  --buttonBackgroundColor: #2d374d;
+}
+
+.step--1 .project-name-wrapper {
+  margin-left: 12px;
+  display: flex;
+}
+
+.step--1 .project-name-wrapper .button {
+  margin-left: 1rem;
+}
+
+.email-error-field {
+  margin: 0 0 0 12px;
+  font-size: 0.8rem;
+  color: #e53e3e;
+}
+
+.error-field {
+  font-size: 0.8rem;
+  color: #e53e3e;
+}
+
+.submit-error {
+  font-size: 0.8rem;
+  color: #e53e3e;
+}
+
+/* TRANSITIONS ONLY FOR PEOPLE WITH NO REDUCED MOTION PREFERENCE */
+@media (prefers-reduced-motion: no-preference) {
+  .step {
+    will-change: transform;
+    transition: 0.2s transform cubic-bezier(0.39, 0.58, 0.57, 1);
+  }
+  .-hidden {
+    transform: translateY(20px);
+  }
+
+  header h1,
+  header p,
+  header form {
+    opacity: 0;
+    transform: translateY(20%);
+    animation: move-up 1.5s forwards, fade-in 0.75s forwards;
+    animation-delay: 0.5s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  header p {
+    animation-delay: 0.75s;
+  }
+
+  header form {
+    animation-delay: 1s;
+  }
+
+  body:not(.login) .main-wrapper {
+    opacity: 0;
+    transform: translateY(2%);
+    animation: move-up 1.5s forwards, fade-in 0.75s forwards;
+    animation-delay: 1s;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  @keyframes move-up {
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+    }
+  }
+}
