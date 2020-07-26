@@ -115,7 +115,7 @@ function App() {
   return (
     <Fragment>
       <Header />
-      <main>
+      <main className="app">
         <h1>Generate new bannerset</h1>
         <form onSubmit={generateBannerset} autoComplete="off">
           <fieldset className="step step--1">
