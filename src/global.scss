@@ -62,14 +62,17 @@ a {
   font-family: var(--bodyFontFamily);
   font-size: 13.333px;
   font-weight: 400;
+  line-height: 1.5;
   text-transform: uppercase;
   background: var(--buttonBackgroundColor);
   border: none;
   border-radius: 2rem;
   cursor: pointer;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 
   &:hover {
     --buttonBackgroundColor: var(--prettyColor);
+    box-shadow: 0px 8px 20px 0 #99c7ff;
   }
 
   svg {
@@ -98,8 +101,8 @@ a {
   color: var(--prettyColor);
 
   &:hover {
-    --buttonBackgroundColor: rgba(255, 255, 255, 0.8);
-    color: #1a81ff;
+    --buttonBackgroundColor: #fff;
+    box-shadow: 0px 8px 20px 0 #004599;
   }
 }
 
@@ -107,6 +110,10 @@ a {
   color: var(--buttonBackgroundColor);
   background-color: transparent;
   box-shadow: inset 0px 0px 0px 1px;
+
+  &:hover {
+    box-shadow: inset 0px 0px 0px 1px;
+  }
 }
 
 .button--text {
@@ -118,6 +125,7 @@ a {
 
   &:hover {
     color: var(--prettyColor);
+    box-shadow: none;
   }
 }
 
