@@ -13,7 +13,6 @@ import Header from "./components/Header/Header"
 let hasDoneInit = false
 
 function Router() {
-  console.log("router")
   const [user, setUser] = useState({
     stripePortalHref: null,
     isLoggedIn: false,
