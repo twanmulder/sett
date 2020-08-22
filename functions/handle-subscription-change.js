@@ -29,7 +29,12 @@ exports.handler = async ({ body, headers }, context) => {
 
     // take the first word of the plan name and use it as the role
     const plan = subscription.items.data[0].plan.nickname
-    const role = plan.split(" ")[0].toLowerCase()
+    let role
+    if (plan === "prod_HsmyQa7WEWrmYr") {
+      role = "Free"
+    } else if (plan === "prod_HsmygygrMtkFh5") {
+      role = "Pro"
+    }
 
     // send a call to the Netlify Identity admin API to update the user role
     const { identity } = context.clientContext
