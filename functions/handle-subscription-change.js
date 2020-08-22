@@ -28,7 +28,7 @@ exports.handler = async ({ body, headers }, context) => {
     const { netlifyID } = result.data.getUserByStripeID
 
     // take the first word of the plan name and use it as the role
-    const plan = subscription.items.data[0].plan.nickname
+    const plan = subscription.items.data[0].plan.product
     let role
     if (plan === "prod_HsmyQa7WEWrmYr") {
       role = "Free"
