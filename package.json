@@ -7,12 +7,14 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "netlify-identity-widget": "^1.9.1",
+    "node-fetch": "^2.6.0",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-google-login": "^5.1.21",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1"
+    "react-scripts": "3.4.1",
+    "stripe": "^8.89.0"
   },
   "scripts": {
     "start": "react-scripts start",
