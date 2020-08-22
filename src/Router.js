@@ -19,18 +19,6 @@ function Router() {
     isPro: false,
   })
 
-  const updateUserInfo = (netlifyUser) => {
-    if (netlifyUser) {
-      setUser({ ...user, isLoggedIn: true })
-      setUser((state) => {
-        setStripePortalHref(state, netlifyUser)
-        return state
-      })
-    } else {
-      setUser({ ...user, isLoggedIn: false })
-    }
-  }
-
   const setStripePortalHref = (state, netlifyUser) => {
     fetch("/.netlify/functions/create-manage-link", {
       method: "POST",
@@ -41,8 +29,29 @@ function Router() {
       .then((res) => res.json())
       .then((link) => {
         setUser({ ...state, stripePortalHref: link })
+        setUser((state) => {
+          setIsPro(state, netlifyUser)
+          return state
+        })
       })
       .catch((err) => console.error(err))
+  }
+
+  const setIsPro = (state, netlifyUser) => {
+    const role = netlifyUser.app_metadata.roles[0]
+    setUser({ ...state, isPro: role === "Pro" ? true : false })
+  }
+
+  const updateUserInfo = async (netlifyUser) => {
+    if (netlifyUser) {
+      setUser({ ...user, isLoggedIn: true })
+      setUser((state) => {
+        setStripePortalHref(state, netlifyUser)
+        return state
+      })
+    } else {
+      setUser({ ...user, stripePortalHref: null, isLoggedIn: false, isPro: false })
+    }
   }
 
   const handleUserStateChange = (user) => {
