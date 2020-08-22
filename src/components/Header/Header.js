@@ -1,4 +1,4 @@
-import React, { useReducer } from "react"
+import React from "react"
 import { Link, useLocation, useHistory } from "react-router-dom"
 import netlifyIdentity from "netlify-identity-widget"
 
@@ -33,23 +33,23 @@ function Header(props) {
 
         {/* Show log in button when user is not logged in */}
         {!user.isLoggedIn && (
-          <a onClick={login} className="button button--text">
+          <button onClick={login} className="button button--text">
             Log in
-          </a>
+          </button>
         )}
 
         {/* Show sign up button when user is not logged in */}
         {!user.isLoggedIn && (
-          <a onClick={signup} className="button button--text">
+          <button onClick={signup} className="button button--text">
             Sign up
-          </a>
+          </button>
         )}
 
         {/* Show log out button when user is not logged in */}
         {user.isLoggedIn && (
-          <a onClick={logout} className="button button--text">
+          <button onClick={logout} className="button button--text">
             Log out
-          </a>
+          </button>
         )}
 
         {/* Show demo button when user is not pro */}
@@ -61,9 +61,9 @@ function Header(props) {
 
         {/* Show go pro button when user is not pro and is logged in that starts login */}
         {!user.isPro && !user.isLoggedIn && (
-          <a onClick={login} className="button">
+          <button onClick={login} className="button">
             Go pro
-          </a>
+          </button>
         )}
 
         {/* Show go pro button when user is not pro and is logged in that links to stripe */}

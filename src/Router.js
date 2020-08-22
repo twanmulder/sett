@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { BrowserRouter, Switch, Route, Redirect, useLocation } from "react-router-dom"
+import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom"
 import netlifyIdentity from "netlify-identity-widget"
 import ProtectedRoute from "./ProtectedRoute"
 

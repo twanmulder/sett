@@ -127,6 +127,12 @@ a {
     color: var(--prettyColor);
     box-shadow: none;
   }
+
+  &:focus {
+    outline: none;
+    color: var(--prettyColor);
+    text-decoration: underline;
+  }
 }
 
 .button--google {
