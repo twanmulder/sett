@@ -2,7 +2,6 @@ import React, { Fragment } from "react"
 import { Link } from "react-router-dom"
 import "./Home.scss"
 
-import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
 import imgMediumRectangle from "../../assets/medium-rectangle.png"
@@ -17,7 +16,6 @@ import imgTest3 from "../../assets/testimonial-image-03.png"
 function Home() {
   return (
     <Fragment>
-      <Header />
       <main>
         <section className="section--hero">
           <article>

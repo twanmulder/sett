@@ -2,7 +2,6 @@ import React, { Fragment, useState } from "react"
 
 import "./App.scss"
 
-import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
 function App() {
@@ -114,7 +113,6 @@ function App() {
 
   return (
     <Fragment>
-      <Header />
       <main className="app">
         <h1>Generate new bannerset</h1>
         <form onSubmit={generateBannerset} autoComplete="off">

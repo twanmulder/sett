@@ -4,7 +4,6 @@ import GoogleLogin from "react-google-login"
 
 import "./Login.scss"
 
-import Header from "../../components/Header/Header"
 import Footer from "../../components/Footer/Footer"
 
 function Login() {
@@ -23,7 +22,6 @@ function Login() {
 
   return (
     <Fragment>
-      <Header />
       <main className="main--login">
         <section>
           <h2>Log in</h2>
