@@ -68,16 +68,16 @@ function Header(props) {
 
         {/* Show go pro button when user is not pro and is logged in that links to stripe */}
         {!user.isPro && user.isLoggedIn && (
-          <Link className="button" to="/stripe-dashboard">
+          <a href={user.stripePortalHref} className="button">
             Go pro
-          </Link>
+          </a>
         )}
 
         {/* Show manage subscription button when user is logged in and pro */}
         {user.isPro && user.isLoggedIn && (
-          <Link className="button button--ghost" to="/stripe-dashboard">
+          <a href={user.stripePortalHref} className="button button--ghost">
             Manage subscription
-          </Link>
+          </a>
         )}
 
         {/* Show app button when user is logged in and pro */}
