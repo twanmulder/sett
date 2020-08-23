@@ -74,7 +74,7 @@ function Router() {
     <BrowserRouter>
       <Header user={user} />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" render={(props) => <Home {...props} user={user} />} />
         <Route exact path="/login" component={Login} />
         <ProtectedRoute exact path="/demo" user={!user.isPro} component={Demo} redirect="/app" />
         <ProtectedRoute exact path="/app" user={user.isPro} component={App} redirect="/demo" />

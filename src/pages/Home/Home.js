@@ -1,5 +1,6 @@
 import React, { Fragment } from "react"
 import { Link } from "react-router-dom"
+import netlifyIdentity from "netlify-identity-widget"
 import "./Home.scss"
 
 import Footer from "../../components/Footer/Footer"
@@ -13,7 +14,12 @@ import imgTest1 from "../../assets/testimonial-image-01.png"
 import imgTest2 from "../../assets/testimonial-image-02.png"
 import imgTest3 from "../../assets/testimonial-image-03.png"
 
-function Home() {
+function Home(props) {
+  const user = props.user
+  const goToDemoHref = user.isPro && user.isLoggedIn ? "/app" : "/demo"
+
+  const login = () => netlifyIdentity.open("login")
+
   return (
     <Fragment>
       <main>
@@ -27,7 +33,7 @@ function Home() {
               </em>
             </h1>
             <p>No code, no struggle, no worries. Create a template in just seconds!</p>
-            <Link to="app" className="button">
+            <Link to={goToDemoHref} className="button">
               Try for free
             </Link>
           </article>
@@ -215,7 +221,7 @@ function Home() {
                   </li>
                 </ul>
               </div>
-              <Link to="/app" className="button button--accent">
+              <Link to={goToDemoHref} className="button button--accent">
                 Try for free
               </Link>
             </div>
@@ -263,9 +269,24 @@ function Home() {
                   </li>
                 </ul>
               </div>
-              <Link to="/go-pro" className="button button--invert">
-                Go pro
-              </Link>
+
+              {!user.isPro && !user.isLoggedIn && (
+                <button onClick={login} className="button button--invert">
+                  Go pro
+                </button>
+              )}
+
+              {!user.isPro && user.isLoggedIn && (
+                <a href={user.stripePortalHref} className="button button--invert">
+                  Go pro
+                </a>
+              )}
+
+              {user.isPro && user.isLoggedIn && (
+                <Link to="/app" className="button button--invert">
+                  Go pro
+                </Link>
+              )}
             </div>
           </article>
         </section>
