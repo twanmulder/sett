@@ -39,43 +39,17 @@ function Router() {
       },
     })
     const json = await response.json()
-    return json
+    if (json == "Pro") {
+      return true
+    }
+    return false
   }
-
-  // const setStripePortalHref = (state, netlifyUser) => {
-  //   fetch("/.netlify/functions/create-manage-link", {
-  //     method: "POST",
-  //     headers: {
-  //       Authorization: `Bearer ${netlifyUser.token.access_token}`,
-  //     },
-  //   })
-  //     .then((res) => res.json())
-  //     .then((link) => {
-  //       setUser({ ...state, stripePortalHref: link })
-  //       setUser((state) => {
-  //         setIsPro(state, netlifyUser)
-  //         return state
-  //       })
-  //     })
-  //     .catch((err) => console.error(err))
-  // }
-
-  // const setIsPro = (state, netlifyUser) => {
-  //   const role = netlifyUser.app_metadata.roles[0]
-  //   setUser({ ...state, isPro: role === "Pro" ? true : false })
-  // }
 
   const updateUserInfo = async (netlifyUser) => {
     if (netlifyUser) {
       const stripePortalHref = await getStripePortalHref(netlifyUser)
       const isPro = await getIfUserIsPro(netlifyUser)
-      console.log({ stripePortalHref, isPro })
-      // setUser({ ...user, isLoggedIn: true })
-      // setUser((state) => {
-      // setStripePortalHref(state, netlifyUser)
-      // return state
-      // })
-      setUser({ ...user, stripePortalHref: stripePortalHref, isLoggedIn: true, isPro: false })
+      setUser({ ...user, stripePortalHref: stripePortalHref, isLoggedIn: true, isPro: isPro })
     } else {
       setUser({ ...user, stripePortalHref: null, isLoggedIn: false, isPro: false })
     }

@@ -1,11 +1,11 @@
-exports.handler = async (context) => {
+exports.handler = async (event, context) => {
   console.log(context)
   const { user } = context.clientContext
   const roles = user ? user.app_metadata.roles : false
 
   return {
     statusCode: 200,
-    body: JSON.stringify(user),
+    body: JSON.stringify(roles[0]),
   }
 
   if (!roles || !roles.some((role) => allowedRoles.includes(role))) {
