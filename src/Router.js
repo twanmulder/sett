@@ -6,7 +6,6 @@ import ProtectedRoute from "./ProtectedRoute"
 import Home from "./pages/Home/Home"
 import App from "./pages/App/App"
 import Demo from "./pages/Demo/Demo"
-import Login from "./pages/Login/Login"
 
 import Header from "./components/Header/Header"
 
@@ -75,7 +74,6 @@ function Router() {
       <Header user={user} />
       <Switch>
         <Route exact path="/" render={(props) => <Home {...props} user={user} />} />
-        <Route exact path="/login" component={Login} />
         <ProtectedRoute exact path="/demo" user={!user.isPro} component={Demo} redirect="/app" />
         <ProtectedRoute exact path="/app" user={user.isPro} component={App} redirect="/demo" />
         <Route>
