@@ -38,32 +38,32 @@ function Router() {
         Authorization: `Bearer ${token}`,
       },
     })
-    // const json = await response.json()
-    // return json
+    const json = await response.json()
+    return json
   }
 
-  const setStripePortalHref = (state, netlifyUser) => {
-    fetch("/.netlify/functions/create-manage-link", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${netlifyUser.token.access_token}`,
-      },
-    })
-      .then((res) => res.json())
-      .then((link) => {
-        setUser({ ...state, stripePortalHref: link })
-        setUser((state) => {
-          setIsPro(state, netlifyUser)
-          return state
-        })
-      })
-      .catch((err) => console.error(err))
-  }
+  // const setStripePortalHref = (state, netlifyUser) => {
+  //   fetch("/.netlify/functions/create-manage-link", {
+  //     method: "POST",
+  //     headers: {
+  //       Authorization: `Bearer ${netlifyUser.token.access_token}`,
+  //     },
+  //   })
+  //     .then((res) => res.json())
+  //     .then((link) => {
+  //       setUser({ ...state, stripePortalHref: link })
+  //       setUser((state) => {
+  //         setIsPro(state, netlifyUser)
+  //         return state
+  //       })
+  //     })
+  //     .catch((err) => console.error(err))
+  // }
 
-  const setIsPro = (state, netlifyUser) => {
-    const role = netlifyUser.app_metadata.roles[0]
-    setUser({ ...state, isPro: role === "Pro" ? true : false })
-  }
+  // const setIsPro = (state, netlifyUser) => {
+  //   const role = netlifyUser.app_metadata.roles[0]
+  //   setUser({ ...state, isPro: role === "Pro" ? true : false })
+  // }
 
   const updateUserInfo = async (netlifyUser) => {
     if (netlifyUser) {
