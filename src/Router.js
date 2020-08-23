@@ -39,7 +39,7 @@ function Router() {
       },
     })
     const json = await response.json()
-    if (json == "Pro") {
+    if (json === "Pro") {
       return true
     }
     return false
