@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react"
+import standardAdFormats from "../../utils/standardAdFormats"
 
 import "./App.scss"
 
@@ -6,42 +7,15 @@ import Footer from "../../components/Footer/Footer"
 
 function App() {
   const [currenStep, setCurrentStep] = useState(1)
-  const standardFormatsObject = [
-    {
-      size: "120x600",
-      checked: false,
-    },
-    {
-      size: "160x600",
-      checked: false,
-    },
-    {
-      size: "300x250",
-      checked: false,
-    },
-    {
-      size: "300x600",
-      checked: false,
-    },
-    {
-      size: "320x100",
-      checked: false,
-    },
-    {
-      size: "336x280",
-      checked: false,
-    },
-    {
-      size: "728x90",
-      checked: false,
-    },
-    {
-      size: "970x250",
-      checked: false,
-    },
-  ]
-  const [availableFormats, setAvailableFormats] = useState(standardFormatsObject)
+  const [projectName, setProjectName] = useState("")
+  const [adPlatform, setAdPlatform] = useState({ selectedOption: null })
+  const [availableFormats, setAvailableFormats] = useState(standardAdFormats)
   const [customFormatError, setCustomFormatError] = useState("\u00a0")
+  const [CDNScripts, setCDNScripts] = useState({
+    GSAP: { name: "GreenSock Animation Platform (GSAP)", checked: false },
+    ThreeJS: { name: "Three.js", checked: false },
+    AnimeJS: { name: "Anime.js", checked: false },
+  })
 
   const showNextStep = (nextStep, preventDefault, event) => {
     if (preventDefault) {
@@ -58,6 +32,16 @@ function App() {
       return true
     }
     return false
+  }
+
+  const handleProjectName = (event) => {
+    setProjectName(event.target.value)
+  }
+
+  const handleAdPlatformChange = (event) => {
+    const radioButtonValue = event.target.value
+    setAdPlatform((state) => ({ ...state, selectedOption: radioButtonValue }))
+    showNextStep(3)
   }
 
   const handleFormatChange = (size) => {
@@ -106,6 +90,10 @@ function App() {
     customFormatInputHeight.value = ""
   }
 
+  const handleCDNChange = ({ target }) => {
+    setCDNScripts((state) => ({ ...state, [target.name]: { checked: !state[target.name].checked, name: state[target.name].name } }))
+  }
+
   const generateBannerset = (event) => {
     event.preventDefault()
     console.log("Generating bannerset")
@@ -125,7 +113,7 @@ function App() {
             <br />
             <div className="project-name-wrapper">
               <br />
-              <input type="text" id="project-name" name="Project Name" />
+              <input type="text" id="project-name" name="Project Name" onChange={handleProjectName} value={projectName} />
               <button
                 className="button"
                 onClick={(e) => {
@@ -142,37 +130,13 @@ function App() {
             <span>(Not sure? Don't worry, you can always change this later)</span>
             <br />
             <br />
-            <input
-              type="radio"
-              id="DCM"
-              name="Ad Platform"
-              value="DCM"
-              onChange={(e) => {
-                showNextStep(3, false, e)
-              }}
-            />
+            <input type="radio" id="DCM" name="Ad Platform" value="DCM" checked={adPlatform.selectedOption === "DCM"} onChange={handleAdPlatformChange} />
             <label htmlFor="DCM">Google DoubleClick (DCM)</label>
             <br />
-            <input
-              type="radio"
-              id="Studio"
-              name="Ad Platform"
-              value="Studio"
-              onChange={(e) => {
-                showNextStep(3, false, e)
-              }}
-            />
+            <input type="radio" id="Studio" name="Ad Platform" value="Studio" checked={adPlatform.selectedOption === "Studio"} onChange={handleAdPlatformChange} />
             <label htmlFor="Studio">Google Studio</label>
             <br />
-            <input
-              type="radio"
-              id="Other"
-              name="Ad Platform"
-              value="Other"
-              onChange={(e) => {
-                showNextStep(3, false, e)
-              }}
-            />
+            <input type="radio" id="Other" name="Ad Platform" value="Other" checked={adPlatform.selectedOption === "Other"} onChange={handleAdPlatformChange} />
             <label htmlFor="Other">Other</label>
             <br />
             <br />
@@ -207,13 +171,13 @@ function App() {
                 <p>Custom:</p>
                 <div>
                   <label htmlFor="width">Width</label>
-                  <input type="number" id="width" name="width" />
+                  <input type="number" id="width" name="width" min="1" />
                   <span>px</span>
                 </div>
                 <br />
                 <div>
                   <label htmlFor="height">Height</label>
-                  <input type="number" id="height" name="height" />
+                  <input type="number" id="height" name="height" min="1" />
                   <span>px</span>
                 </div>
                 <p className="error-field js-error-field">{customFormatError}</p>
@@ -229,15 +193,13 @@ function App() {
             <span>(Automatically uses the most recent version)</span>
             <br />
             <br />
-            <input type="checkbox" id="AnimeJS" name="CDN Script" value="AnimeJS" />
-            <label htmlFor="AnimeJS">Anime.js</label>
-            <br />
-            <input type="checkbox" id="GSAP" name="CDN Script" value="GSAP" />
-            <label htmlFor="GSAP">GreenSock Animation Platform (GSAP)</label>
-            <br />
-            <input type="checkbox" id="ThreeJS" name="CDN Script" value="ThreeJS" />
-            <label htmlFor="ThreeJS">Three.js</label>
-            <br />
+            {Object.keys(CDNScripts).map((key) => (
+              <Fragment key={key}>
+                <input onChange={handleCDNChange} type="checkbox" id={key} name={key} checked={CDNScripts[key].checked} />
+                <label htmlFor={key}>{CDNScripts[key].name}</label>
+                <br />
+              </Fragment>
+            ))}
             <br />
           </fieldset>
           <div className={shouldStepBeShown(5) ? "submit-wrapper step--5" : "submit-wrapper step--5 -hidden"}>
