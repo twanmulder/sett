@@ -19,36 +19,51 @@ section > h2 svg {
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
-.section--hero article {
-  text-align: center;
-}
+  article {
+    text-align: center;
 
-.section--hero article h1 {
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  line-height: 1.1;
-}
+    h1 {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      line-height: 1.1;
+    }
 
-.section--hero em {
-  display: block;
-  overflow: hidden;
-  color: var(--prettyColor);
-}
+    em {
+      display: block;
+      overflow: hidden;
+      color: var(--prettyColor);
 
-.section--hero em span {
-  display: inline-block;
-}
+      span {
+        display: inline-block;
+      }
+    }
 
-.section--hero article p {
-  margin-bottom: 2rem;
-  color: var(--prettyColorShade);
-}
+    .hero-copy {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-.section--hero article a.button {
-  font-size: 1rem;
-  padding: 0.75rem 1.5rem;
+    p {
+      margin-bottom: 2.5rem;
+      color: var(--prettyColorShade);
+      font-size: 1.25rem;
+      font-weight: 300;
+      line-height: 135%;
+    }
+
+    a.button {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-image: linear-gradient(180deg, var(--prettyColor), #0067e6);
+    }
+
+    .hero-disclaimer {
+      font-size: 1rem;
+      margin-top: 1.25rem;
+    }
+  }
 }
 
 .section--about {
@@ -373,18 +388,19 @@ section > h2 svg {
 
   .section--hero {
     height: auto;
-    padding: 14rem 1rem;
-    justify-content: flex-start;
-  }
-
-  .section--hero article h1 {
-    margin-top: 0;
-    font-size: 4rem;
-    text-align: left;
+    padding: 10rem 1rem;
   }
 
   .section--hero article {
-    text-align: left;
+    h1 {
+      margin-top: 0;
+      font-size: 4.5rem;
+      line-height: 105%;
+    }
+
+    .hero-copy {
+      font-size: 1.5rem;
+    }
   }
 
   .banner-visuals {
@@ -453,9 +469,9 @@ section > h2 svg {
     animation-delay: 0.55s;
   }
 
-  .section--hero p {
+  .section--hero .hero-copy {
     opacity: 0;
-    transform: translateY(115%);
+    transform: translateY(45%);
 
     animation: move-up 0.8s forwards, fade-in 0.5s forwards;
     animation-delay: 0.9s;
@@ -464,11 +480,18 @@ section > h2 svg {
 
   .section--hero a.button {
     opacity: 0;
-    transform: translateY(15px);
 
-    animation: move-up 0.8s forwards, fade-in 1s forwards;
-    animation-delay: 1.05s;
-    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation: fade-in 0.5s forwards;
+    animation-delay: 1.15s;
+    animation-timing-function: ease-out;
+  }
+
+  .section--hero .hero-disclaimer {
+    opacity: 0;
+
+    animation: fade-in 0.5s forwards;
+    animation-delay: 1.3s;
+    animation-timing-function: ease-out;
   }
 
   .banner-visuals .banner-image {

@@ -5,10 +5,10 @@ import "./Home.scss"
 
 import Footer from "../../components/Footer/Footer"
 
-import imgMediumRectangle from "../../assets/medium-rectangle.png"
-import imgWideSkyscraper from "../../assets/wide-skyscraper.png"
-import imgHalfPage from "../../assets/half-page.png"
-import imgBillboard from "../../assets/billboard.png"
+// import imgMediumRectangle from "../../assets/medium-rectangle.png"
+// import imgWideSkyscraper from "../../assets/wide-skyscraper.png"
+// import imgHalfPage from "../../assets/half-page.png"
+// import imgBillboard from "../../assets/billboard.png"
 import imgCodeScreenshot from "../../assets/code-screenshot.png"
 import imgTest1 from "../../assets/testimonial-image-01.png"
 import imgTest2 from "../../assets/testimonial-image-02.png"
@@ -32,19 +32,20 @@ function Home(props) {
                 <span>absurdly</span> <span>fast</span>
               </em>
             </h1>
-            <p>No code, no struggle, no worries. Create a template in just seconds!</p>
+            <p className="hero-copy">No code, no struggle, no worries. SETT let's you create a banner template in just seconds!</p>
             <Link to={goToDemoHref} className="button">
               Try for free
             </Link>
+            <p className="hero-disclaimer">No account required</p>
           </article>
         </section>
 
-        <section className="banner-visuals">
+        {/* <section className="banner-visuals">
           <img className="banner-image banner-image--300x250" alt="" src={imgMediumRectangle} />
           <img className="banner-image banner-image--160x600" alt="" src={imgWideSkyscraper} />
           <img className="banner-image banner-image--300x600" alt="" src={imgHalfPage} />
           <img className="banner-image banner-image--970x250" alt="" src={imgBillboard} />
-        </section>
+        </section> */}
 
         <div className="about-wrapper">
           <section className="section--about">
