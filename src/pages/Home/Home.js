@@ -222,7 +222,7 @@ function Home(props) {
                   </li>
                 </ul>
               </div>
-              <Link to={goToDemoHref} className="button button--accent">
+              <Link to={goToDemoHref} className="button">
                 Try for free
               </Link>
             </div>
