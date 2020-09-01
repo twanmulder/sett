@@ -3,13 +3,13 @@ import { Link } from "react-router-dom"
 import netlifyIdentity from "netlify-identity-widget"
 import "./Home.scss"
 
+import HeroVisual from "../../components/HeroVisual/HeroVisual"
 import Footer from "../../components/Footer/Footer"
 
-// import imgMediumRectangle from "../../assets/medium-rectangle.png"
-// import imgWideSkyscraper from "../../assets/wide-skyscraper.png"
-// import imgHalfPage from "../../assets/half-page.png"
-// import imgBillboard from "../../assets/billboard.png"
 import imgCodeScreenshot from "../../assets/code-screenshot.png"
+import about1 from "../../assets/about-1.png"
+import about2 from "../../assets/about-2.png"
+import about3 from "../../assets/about-3.png"
 import imgTest1 from "../../assets/testimonial-image-01.png"
 import imgTest2 from "../../assets/testimonial-image-02.png"
 import imgTest3 from "../../assets/testimonial-image-03.png"
@@ -23,6 +23,8 @@ function Home(props) {
   return (
     <Fragment>
       <main>
+        <HeroVisual />
+
         <section className="section--hero">
           <article>
             <h1>
@@ -40,48 +42,42 @@ function Home(props) {
           </article>
         </section>
 
-        {/* <section className="banner-visuals">
-          <img className="banner-image banner-image--300x250" alt="" src={imgMediumRectangle} />
-          <img className="banner-image banner-image--160x600" alt="" src={imgWideSkyscraper} />
-          <img className="banner-image banner-image--300x600" alt="" src={imgHalfPage} />
-          <img className="banner-image banner-image--970x250" alt="" src={imgBillboard} />
-        </section> */}
-
-        <div className="about-wrapper">
-          <section className="section--about">
-            <article className="about-heading">
-              <h3>READY, SETT, GO</h3>
-              <h2>Start fast, create beautifully</h2>
-              <p>
-                Starting a bannerset from scratch takes time and is highly error-prone. <br />
-                <br />
-                Using a template eliminates both of these problems, leaving you with more time to develop!
-              </p>
-            </article>
+        <div className="product-wrapper">
+          <section className="section--product">
+            <img alt="" src={imgCodeScreenshot} />
           </section>
         </div>
 
-        <div className="code-wrapper">
-          <section className="section--code">
-            <h2>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.0333 14.8284L6.44751 16.2426L10.6902 12L6.44751 7.75733L5.0333 9.17155L7.86172 12L5.0333 14.8284Z" fill="currentColor" />
-                <path className="blink" d="M15 14H11V16H15V14Z" fill="currentColor" />
-                <path fillRule="evenodd" clipRule="evenodd" d="M2 2C0.895431 2 0 2.89543 0 4V20C0 21.1046 0.89543 22 2 22H22C23.1046 22 24 21.1046 24 20V4C24 2.89543 23.1046 2 22 2H2ZM22 4H2L2 20H22V4Z" fill="currentColor" />
-              </svg>
-              Developers first
-            </h2>
-            <p>
-              SETT offers a template generator that meets the requirements of the platforms you're creating for.
-              <br />
-              <br />
-              We are continuously improving our platform and focusing on keeping your developer experience as fun as possible.
-            </p>
-            <div className="img-overflow-wrapper">
-              <img src={imgCodeScreenshot} alt="Code editor showing the JavaScript file of the Google Studio template" />
+        <section className="section--about">
+          <article className="text-right">
+            <div className="about-image">
+              <img alt="" src={about1} />
             </div>
-          </section>
-        </div>
+            <div className="about-text">
+              <h2>Save Time & Money</h2>
+              <p>Setting up the development of a bannerset is just too boring and error-prone. SETT will save you time and money so you can focus on doing the work you love.</p>
+              <p>Using Google Studio or DoubleClick for uploading your banners? SETT will provide industry-grade template code which will ensure your banners work as smooth as possible.</p>
+            </div>
+          </article>
+          <article className="text-left">
+            <div className="about-text">
+              <h2>Use Custom Formats</h2>
+              <p>Working with a lot of different ad formats can be such a pain to get started working on. SETT offers the ability to create a template for all standard + all custom formats you want to create.</p>
+            </div>
+            <div className="about-image">
+              <img alt="" src={about2} />
+            </div>
+          </article>
+          <article className="text-right">
+            <div className="about-image">
+              <img alt="" src={about3} />
+            </div>
+            <div className="about-text">
+              <h2>Automatically import the Latest Frameworks</h2>
+              <p>Working with any frameworks you import using a CDN? Maybe you're using GreenSock? Anime.js? Three.js? SETT will automatically get the latest version and add it to all the banners using a CDN.</p>
+            </div>
+          </article>
+        </section>
 
         <section className="section__testimonials">
           <h2>

@@ -41,6 +41,14 @@ body {
   background-color: var(--bodyBackgroundColor);
 }
 
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border-style: none;
+}
+
 main {
   flex: 1;
 }
