@@ -52,7 +52,7 @@ function Home(props) {
           <section className="section--about">
             <article className="text-right">
               <div className="about-image">
-                <img alt="" src={about1} loading="lazy" />
+                <img alt="" src={about1} />
               </div>
               <div className="about-text">
                 <h2>Save Time & Money</h2>
@@ -77,7 +77,7 @@ function Home(props) {
             </article>
             <article className="text-left">
               <div className="about-image">
-                <img alt="" src={about2} loading="lazy" />
+                <img alt="" src={about2} />
               </div>
               <div className="about-text">
                 <h2>Use Custom Formats</h2>
@@ -102,7 +102,7 @@ function Home(props) {
             </article>
             <article className="text-right">
               <div className="about-image">
-                <img alt="" src={about3} loading="lazy" />
+                <img alt="" src={about3} />
               </div>
               <div className="about-text">
                 <h2>Automatically import the Latest Frameworks</h2>
