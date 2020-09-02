@@ -44,7 +44,7 @@ function Home(props) {
 
         <div className="product-wrapper">
           <section className="section--product">
-            <img alt="" src={imgCodeScreenshot} />
+            <img width="800" height="600" alt="Screenshot of a part of the code that SETT delivers to its users." src={imgCodeScreenshot} />
           </section>
         </div>
 
@@ -52,7 +52,7 @@ function Home(props) {
           <section className="section--about">
             <article className="text-right">
               <div className="about-image">
-                <img alt="" src={about1} />
+                <img alt="" src={about1} loading="lazy" />
               </div>
               <div className="about-text">
                 <h2>Save Time & Money</h2>
@@ -76,6 +76,9 @@ function Home(props) {
               </div>
             </article>
             <article className="text-left">
+              <div className="about-image">
+                <img alt="" src={about2} loading="lazy" />
+              </div>
               <div className="about-text">
                 <h2>Use Custom Formats</h2>
                 <p>Working with a lot of different ad formats can be such a pain to get started working on. SETT offers the ability to create a template for all standard + custom formats you want to create.</p>
@@ -96,13 +99,10 @@ function Home(props) {
                   <p>Add custom formats based on your needs</p>
                 </div>
               </div>
-              <div className="about-image">
-                <img alt="" src={about2} />
-              </div>
             </article>
             <article className="text-right">
               <div className="about-image">
-                <img alt="" src={about3} />
+                <img alt="" src={about3} loading="lazy" />
               </div>
               <div className="about-text">
                 <h2>Automatically import the Latest Frameworks</h2>

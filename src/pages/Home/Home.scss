@@ -13,7 +13,7 @@ section > h2 svg {
 }
 
 .section--hero {
-  padding-bottom: 6rem;
+  padding-bottom: 2rem;
 
   display: flex;
   justify-content: center;
@@ -68,7 +68,7 @@ section > h2 svg {
 
 .product-wrapper {
   .section--product {
-    max-height: 475px;
+    max-height: 155px;
     overflow: hidden;
 
     img {
@@ -79,7 +79,7 @@ section > h2 svg {
 }
 
 .wrapper-about {
-  background-image: linear-gradient(0deg, #fff, transparent);
+  background-image: linear-gradient(0deg, #fff, var(--bodyBackgroundColor));
 }
 
 .section--about {
@@ -89,21 +89,18 @@ section > h2 svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 
     &:not(:first-child) {
       margin-top: 8rem;
     }
 
-    &.text-right .about-text {
-      margin-left: 3rem;
-    }
-
-    &.text-left .about-text {
-      margin-right: 3rem;
-    }
-
     & > div {
-      width: 50%;
+      width: 90%;
+    }
+
+    .about-text {
+      margin-top: 2rem;
     }
 
     img {
@@ -361,6 +358,10 @@ section > h2 svg {
     }
   }
 
+  .product-wrapper .section--product {
+    max-height: 275px;
+  }
+
   .section--pricing {
     padding-top: 6rem;
   }
@@ -380,10 +381,43 @@ section > h2 svg {
   }
 }
 
+@media screen and (min-width: 769px) {
+  .product-wrapper .section--product {
+    max-height: 475px;
+  }
+
+  .section--about {
+    article {
+      flex-direction: row;
+
+      & > div {
+        width: 50%;
+      }
+
+      .about-text {
+        margin-top: 0;
+      }
+
+      &.text-left {
+        .about-image {
+          order: 9999;
+        }
+        .about-text {
+          margin-right: 3rem;
+        }
+      }
+
+      &.text-right .about-text {
+        margin-left: 3rem;
+      }
+    }
+  }
+}
+
 /* TRANSITIONS ONLY FOR PEOPLE WITH NO REDUCED MOTION PREFERENCE */
 @media (prefers-reduced-motion: no-preference) {
   .section--hero em span {
-    transform: translateY(115%);
+    transform: translateY(115%) translateZ(0);
 
     animation: move-up 0.8s forwards;
     animation-delay: 0.4s;
@@ -396,7 +430,7 @@ section > h2 svg {
 
   .section--hero .hero-copy {
     opacity: 0;
-    transform: translateY(45%);
+    transform: translateY(45%) translateZ(0);
 
     animation: move-up 0.8s forwards, fade-in 0.5s forwards;
     animation-delay: 0.9s;
@@ -421,7 +455,7 @@ section > h2 svg {
 
   .section--product img {
     opacity: 0;
-    transform: translateY(5%);
+    transform: translateY(5%) translateZ(0);
 
     animation: move-up 0.8s forwards, fade-in 0.5s forwards;
     animation-delay: 1.45s;
@@ -434,7 +468,7 @@ section > h2 svg {
 
   @keyframes move-up {
     to {
-      transform: translateY(0);
+      transform: translateY(0) translateZ(0);
     }
   }
 
