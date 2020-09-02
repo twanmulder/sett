@@ -11,6 +11,7 @@
   --bodyFontColorLight: #fff;
   --buttonBackgroundColor: #0074fe;
   --buttonBackgroundColor: linear-gradient(180deg, var(--prettyColor), #0067e6);
+  --svg-icon-tint: var(--prettyColor);
 }
 
 *,
@@ -181,17 +182,17 @@ a {
       margin: 0 0 0 1rem;
     }
   }
+}
 
-  .plan-svg-wrapper {
-    width: 24px;
-    height: 24px;
+.svg-wrapper {
+  width: 24px;
+  height: 24px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .svg-icon--cross {
-    color: #ccc;
-  }
+.svg-icon--cross {
+  color: #ccc;
 }

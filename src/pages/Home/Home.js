@@ -48,36 +48,85 @@ function Home(props) {
           </section>
         </div>
 
-        <section className="section--about">
-          <article className="text-right">
-            <div className="about-image">
-              <img alt="" src={about1} />
-            </div>
-            <div className="about-text">
-              <h2>Save Time & Money</h2>
-              <p>Setting up the development of a bannerset is just too boring and error-prone. SETT will save you time and money so you can focus on doing the work you love.</p>
-              <p>Using Google Studio or DoubleClick for uploading your banners? SETT will provide industry-grade template code which will ensure your banners work as smooth as possible.</p>
-            </div>
-          </article>
-          <article className="text-left">
-            <div className="about-text">
-              <h2>Use Custom Formats</h2>
-              <p>Working with a lot of different ad formats can be such a pain to get started working on. SETT offers the ability to create a template for all standard + all custom formats you want to create.</p>
-            </div>
-            <div className="about-image">
-              <img alt="" src={about2} />
-            </div>
-          </article>
-          <article className="text-right">
-            <div className="about-image">
-              <img alt="" src={about3} />
-            </div>
-            <div className="about-text">
-              <h2>Automatically import the Latest Frameworks</h2>
-              <p>Working with any frameworks you import using a CDN? Maybe you're using GreenSock? Anime.js? Three.js? SETT will automatically get the latest version and add it to all the banners using a CDN.</p>
-            </div>
-          </article>
-        </section>
+        <div className="wrapper-about">
+          <section className="section--about">
+            <article className="text-right">
+              <div className="about-image">
+                <img alt="" src={about1} />
+              </div>
+              <div className="about-text">
+                <h2>Save Time & Money</h2>
+                <p>Setting up the development of a bannerset is just too boring and error-prone. SETT will save you time and money so you can focus on doing the work you love.</p>
+                <div className="about-usp">
+                  <div className="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </div>
+                  <p>Set-up no longer takes minutes, but just a few seconds</p>
+                </div>
+                <div className="about-usp">
+                  <div className="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </div>
+                  <p>Template ready for Ad Platforms like Google Studio or DoubleCick</p>
+                </div>
+              </div>
+            </article>
+            <article className="text-left">
+              <div className="about-text">
+                <h2>Use Custom Formats</h2>
+                <p>Working with a lot of different ad formats can be such a pain to get started working on. SETT offers the ability to create a template for all standard + custom formats you want to create.</p>
+                <div className="about-usp">
+                  <div className="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </div>
+                  <p>Implement formats used all over the industry</p>
+                </div>
+                <div className="about-usp">
+                  <div className="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </div>
+                  <p>Add custom formats based on your needs</p>
+                </div>
+              </div>
+              <div className="about-image">
+                <img alt="" src={about2} />
+              </div>
+            </article>
+            <article className="text-right">
+              <div className="about-image">
+                <img alt="" src={about3} />
+              </div>
+              <div className="about-text">
+                <h2>Automatically import the Latest Frameworks</h2>
+                <p>Working with frameworks you import using a CDN? Maybe you're using GreenSock? Anime.js? Three.js? SETT will automatically get the latest version and add it to your banners.</p>
+                <div className="about-usp">
+                  <div className="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </div>
+                  <p>Support for the latest version of GSAP, Anime.js, and Three.js</p>
+                </div>
+                <div className="about-usp">
+                  <div className="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
+                      <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
+                    </svg>
+                  </div>
+                  <p>New frameworks added monthly</p>
+                </div>
+              </div>
+            </article>
+          </section>
+        </div>
 
         <section className="section__testimonials">
           <h2>
@@ -182,7 +231,7 @@ function Home(props) {
                 <p className="plan-lead">For anyone who just wants to try out our template generator.</p>
                 <ul className="plan-features">
                   <li>
-                    <div className="plan-svg-wrapper">
+                    <div className="svg-wrapper">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
                         <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
@@ -190,7 +239,7 @@ function Home(props) {
                     <p>Banner template generator</p>
                   </li>
                   <li>
-                    <div className="plan-svg-wrapper">
+                    <div className="svg-wrapper">
                       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" className="svg-icon svg-icon--cross">
                         <path d="M 9 2 L 2 9.5" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
                         <path d="M 9 9.5 L 2 2" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
@@ -199,7 +248,7 @@ function Home(props) {
                     <p>Add custom formats</p>
                   </li>
                   <li>
-                    <div className="plan-svg-wrapper">
+                    <div className="svg-wrapper">
                       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" className="svg-icon svg-icon--cross">
                         <path d="M 9 2 L 2 9.5" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
                         <path d="M 9 9.5 L 2 2" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
@@ -208,7 +257,7 @@ function Home(props) {
                     <p>Import scripts via CDN</p>
                   </li>
                   <li>
-                    <div className="plan-svg-wrapper">
+                    <div className="svg-wrapper">
                       <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" className="svg-icon svg-icon--cross">
                         <path d="M 9 2 L 2 9.5" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
                         <path d="M 9 9.5 L 2 2" fill="transparent" strokeWidth="2" stroke="currentColor" strokeLinecap="round" strokeMiterlimit="10" strokeDasharray=""></path>
@@ -233,7 +282,7 @@ function Home(props) {
                 <p className="plan-lead">For the individuals and teams that want to customize and improve their generated templates.</p>
                 <ul className="plan-features">
                   <li>
-                    <div className="plan-svg-wrapper">
+                    <div className="svg-wrapper">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
                         <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
@@ -241,7 +290,7 @@ function Home(props) {
                     <p>Banner template generator</p>
                   </li>
                   <li>
-                    <div className="plan-svg-wrapper">
+                    <div className="svg-wrapper">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
                         <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
@@ -249,7 +298,7 @@ function Home(props) {
                     <p>Add custom formats</p>
                   </li>
                   <li>
-                    <div className="plan-svg-wrapper">
+                    <div className="svg-wrapper">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
                         <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
@@ -257,7 +306,7 @@ function Home(props) {
                     <p>Import scripts via CDN</p>
                   </li>
                   <li>
-                    <div className="plan-svg-wrapper">
+                    <div className="svg-wrapper">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" className="svg-icon">
                         <path fill="transparent" d="M17 8.5l-7 7-3-3" strokeWidth="2" stroke="var(--svg-icon-tint)" strokeLinecap="round" strokeLinejoin="round"></path>
                       </svg>
