@@ -5,7 +5,7 @@ exports.handler = async (event) => {
   const { user } = JSON.parse(event.body)
 
   // create a new customer in Stripe
-  const customer = await stripe.customers.create({ email: user.email, livemode: true })
+  const customer = await stripe.customers.create({ email: user.email })
 
   // subscribe the new customer to the free plan
   await stripe.subscriptions.create({
