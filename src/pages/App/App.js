@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react"
 import standardAdFormats from "../../utils/standardAdFormats"
+import GenerateBannerset from "../../utils/generateBannerSet"
 
 import "./App.scss"
 
@@ -11,6 +12,7 @@ function App() {
   const [adPlatform, setAdPlatform] = useState({ selectedOption: null })
   const [availableFormats, setAvailableFormats] = useState(standardAdFormats)
   const [customFormatError, setCustomFormatError] = useState("\u00a0")
+  const [generateBannerSetError, setGenerateBannerSetError] = useState("\u00a0")
   const [CDNScripts, setCDNScripts] = useState({
     GSAP: { name: "GreenSock Animation Platform (GSAP)", checked: false },
     ThreeJS: { name: "Three.js", checked: false },
@@ -94,16 +96,39 @@ function App() {
     setCDNScripts((state) => ({ ...state, [target.name]: { checked: !state[target.name].checked, name: state[target.name].name } }))
   }
 
-  const generateBannerset = (event) => {
+  const generateBannerSet = (event) => {
     event.preventDefault()
-    console.log("Generating bannerset")
+
+    const name = projectName || "bannerset"
+    const platform = adPlatform.selectedOption
+    const formats = []
+    availableFormats.forEach((format) => {
+      if (format.checked) {
+        formats.push(format.size)
+      }
+    })
+
+    if (formats.length === 0) {
+      return setGenerateBannerSetError("Looks like you haven't selected any formats")
+    } else {
+      setGenerateBannerSetError("\u00a0")
+    }
+
+    const scripts = []
+    Object.entries(CDNScripts).forEach(([key, val]) => {
+      if (val.checked) {
+        scripts.push(key)
+      }
+    })
+
+    GenerateBannerset({ projectName: name, adPlatform: platform, formats: formats, CDNScripts: scripts })
   }
 
   return (
     <Fragment>
       <main className="app">
         <h1>Generate new bannerset</h1>
-        <form onSubmit={generateBannerset} autoComplete="off">
+        <form onSubmit={generateBannerSet} autoComplete="off">
           <fieldset className="step step--1">
             <legend>What's the name of your project?</legend>
             <span>
@@ -203,7 +228,7 @@ function App() {
             <br />
           </fieldset>
           <div className={shouldStepBeShown(5) ? "submit-wrapper step--5" : "submit-wrapper step--5 -hidden"}>
-            <p className="submit-error js-submit-error">&nbsp;</p>
+            <p className="submit-error">{generateBannerSetError}</p>
             <button className="button" disabled={shouldStepBeShown(5) ? false : true}>
               Generate banners!
             </button>

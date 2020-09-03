@@ -61,9 +61,15 @@
     padding-bottom: 10rem;
 
     .button {
+      background-image: none;
       background-color: #1a202c;
       text-transform: none;
-      box-shadow: none;
+      box-shadow: 0 1px 0 0.5px #1a202c, 0 4px 6px 0 rgba(34, 33, 81, 0.25);
+
+      &:hover {
+        background-color: #2d374d;
+        box-shadow: 0 0 0 0.5px #2d374d, 0 8px 12px 0 rgba(234, 234, 251, 0.15);
+      }
     }
   }
 
@@ -127,7 +133,7 @@
   .format-wrapper div:nth-child(2) div {
     display: flex;
     justify-content: flex-end;
-    width: 55%;
+    max-width: 200px;
   }
 
   .format-wrapper div:nth-child(2) div label {
@@ -163,11 +169,6 @@
   input[type="email" i]:focus {
     outline: none;
     border-color: var(--prettyColor);
-  }
-
-  form .button:hover {
-    --buttonBackgroundColor: #2d374d;
-    box-shadow: none;
   }
 
   .step--1 .project-name-wrapper {
