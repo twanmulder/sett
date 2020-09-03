@@ -39,7 +39,8 @@ async function generateFormatFolder(zip, width, height, CDNScripts, adPlatform) 
 async function generateZip({ projectName, adPlatform, CDNScripts, formats }) {
   var zip = new JSZip()
   const bannersetFolder = zip.folder(projectName)
-  const fallbacksFolder = bannersetFolder.folder("fallbacks")
+  // const fallbacksFolder = bannersetFolder.folder("fallbacks")
+  bannersetFolder.folder("fallbacks")
   const creativesFolder = bannersetFolder.folder("creatives")
   await Promise.all(
     formats.map(async (format) => {
