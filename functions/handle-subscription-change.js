@@ -30,9 +30,9 @@ exports.handler = async ({ body, headers }, context) => {
     // take the first word of the plan name and use it as the role
     const plan = subscription.items.data[0].plan.product
     let role
-    if (plan === "prod_HsmyQa7WEWrmYr") {
+    if (plan === "prod_HxJsZkWYAKxEnp") {
       role = "Free"
-    } else if (plan === "prod_HsmygygrMtkFh5") {
+    } else if (plan === "prod_HxJs7EfhOxIsPp") {
       role = "Pro"
     }
 
