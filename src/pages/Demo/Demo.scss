@@ -1,0 +1,45 @@
+.section-demo-formats {
+  background: var(--prettyColor);
+  color: #fff;
+  padding: 1rem 1rem;
+  border-radius: 12px;
+  max-width: 240px;
+  box-shadow: 0 6px 24px 0 rgba(var(--prettyColorRGB), 0.15), 0 0 0 1px rgba(var(--prettyColorRGB), 0.08);
+}
+
+.app .demo-features {
+  --svg-icon-tint: #fff;
+  background: var(--prettyColor);
+  color: #fff;
+  box-shadow: 0 6px 24px 0 rgba(var(--prettyColorRGB), 0.3), 0 0 0 1px rgba(var(--prettyColorRGB), 0.08);
+
+  legend {
+    font-weight: 700;
+    background: var(--bodyFontColor);
+  }
+
+  .plan-lead {
+    margin-left: 12px;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1rem;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  a,
+  button {
+    margin-left: 12px;
+  }
+
+  .plan-vwg-wrapper {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

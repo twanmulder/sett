@@ -140,7 +140,7 @@ function App() {
               <br />
               <input type="text" id="project-name" name="Project Name" onChange={handleProjectName} value={projectName} />
               <button
-                className="button"
+                className="button button--lowercase"
                 onClick={(e) => {
                   showNextStep(2, true, e)
                 }}
@@ -206,7 +206,7 @@ function App() {
                   <span>px</span>
                 </div>
                 <p className="error-field js-error-field">{customFormatError}</p>
-                <button className="button" onClick={addCustomFormat}>
+                <button className="button button--lowercase" onClick={addCustomFormat}>
                   Add format
                 </button>
               </div>
@@ -229,7 +229,7 @@ function App() {
           </fieldset>
           <div className={shouldStepBeShown(5) ? "submit-wrapper step--5" : "submit-wrapper step--5 -hidden"}>
             <p className="submit-error">{generateBannerSetError}</p>
-            <button className="button" disabled={shouldStepBeShown(5) ? false : true}>
+            <button className="button button--lowercase" disabled={shouldStepBeShown(5) ? false : true}>
               Generate banners!
             </button>
           </div>

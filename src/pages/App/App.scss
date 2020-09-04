@@ -58,17 +58,14 @@
   }
 
   form {
-    padding-bottom: 10rem;
-
     .button {
       background-image: none;
       background-color: #1a202c;
-      text-transform: none;
-      box-shadow: 0 1px 0 0.5px #1a202c, 0 4px 6px 0 rgba(34, 33, 81, 0.25);
+      box-shadow: 0 1px 0 0.5px #1a202c, 0 8px 12px 0 rgba(34, 33, 81, 0.25);
 
       &:hover {
-        background-color: #2d374d;
-        box-shadow: 0 0 0 0.5px #2d374d, 0 8px 12px 0 rgba(234, 234, 251, 0.15);
+        background-color: #1c2330;
+        box-shadow: 0 0 0 0.5px #1c2330, 0 8px 12px 0 rgba(34, 33, 81, 0);
       }
     }
   }
@@ -180,20 +177,23 @@
     margin-left: 1rem;
   }
 
-  .email-error-field {
-    margin: 0 0 0 12px;
-    font-size: 0.8rem;
-    color: #e53e3e;
-  }
-
   .error-field {
     font-size: 0.8rem;
     color: #e53e3e;
   }
 
-  .submit-error {
-    font-size: 0.8rem;
-    color: #e53e3e;
+  .submit-wrapper {
+    .submit-error {
+      font-size: 0.8rem;
+      color: #e53e3e;
+    }
+
+    button {
+      display: inline-block;
+      width: 100%;
+      padding: 1rem 0;
+      font-size: 1rem;
+    }
   }
 }
 
