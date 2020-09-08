@@ -13,6 +13,7 @@ section > h2 svg {
 }
 
 .section--hero {
+  padding-top: 5rem;
   padding-bottom: 2rem;
 
   display: flex;
@@ -399,12 +400,6 @@ section > h2 svg {
         margin-left: 3rem;
       }
     }
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .section--hero {
-    padding-top: 6rem;
   }
 }
 
