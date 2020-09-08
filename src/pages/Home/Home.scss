@@ -402,6 +402,12 @@ section > h2 svg {
   }
 }
 
+@media screen and (max-width: 991px) {
+  .section--hero {
+    padding-top: 6rem;
+  }
+}
+
 /* TRANSITIONS ONLY FOR PEOPLE WITH NO REDUCED MOTION PREFERENCE */
 @media (prefers-reduced-motion: no-preference) {
   .section--hero em span {
