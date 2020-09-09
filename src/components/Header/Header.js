@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react"
+import React, { useState, useEffect, Fragment } from "react"
 import { Link, useLocation, useHistory } from "react-router-dom"
 import netlifyIdentity from "netlify-identity-widget"
 
@@ -6,31 +6,28 @@ import "./Header.scss"
 
 function Header(props) {
   const [isNavOpen, updateNavOpenState] = useState(false)
-
+  const isOnAppPage = useLocation().pathname === "/app"
+  const isOnDemoPage = useLocation().pathname === "/demo"
+  const history = useHistory()
   const user = props.user
 
-  let isOnAppPage = false
-  if (useLocation().pathname === "/app") {
-    isOnAppPage = true
-  }
-
-  let isOnDemoPage = false
-  if (useLocation().pathname === "/demo") {
-    isOnDemoPage = true
-  }
-
-  const history = useHistory()
   const login = () => netlifyIdentity.open("login")
   const signup = () => netlifyIdentity.open("signup")
   const logout = () => {
-    netlifyIdentity.logout()
-
-    history.push("/")
+    netlifyIdentity.logout().then(() => {
+      history.push("/")
+    })
   }
 
   const handleToggleNav = () => {
     updateNavOpenState(!isNavOpen)
   }
+
+  useEffect(() => {
+    return history.listen(() => {
+      updateNavOpenState(false)
+    })
+  }, [history])
 
   return (
     <Fragment>
@@ -59,11 +56,9 @@ function Header(props) {
                 )}
                 {/* Show go pro button when user is not pro and is logged in that links to stripe */}
                 {!user.isPro && user.isLoggedIn && (
-                  <li className="large-button">
-                    <a href={user.stripePortalHref} className="button">
-                      Go pro
-                    </a>
-                  </li>
+                  <a href={user.stripePortalHref} className="button">
+                    Go pro
+                  </a>
                 )}
               </li>
             </ul>

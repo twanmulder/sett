@@ -197,6 +197,12 @@
   }
 }
 
+@media screen and (max-width: 991px) {
+  .app {
+    padding-top: 8rem;
+  }
+}
+
 /* TRANSITIONS ONLY FOR PEOPLE WITH NO REDUCED MOTION PREFERENCE */
 @media (prefers-reduced-motion: no-preference) {
   .step {
