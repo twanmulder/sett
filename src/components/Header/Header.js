@@ -6,8 +6,9 @@ import "./Header.scss"
 
 function Header(props) {
   const [isNavOpen, updateNavOpenState] = useState(false)
-  const isOnAppPage = useLocation().pathname === "/app"
-  const isOnDemoPage = useLocation().pathname === "/demo"
+  const { pathname } = useLocation()
+  const isOnAppPage = pathname === "/app"
+  const isOnDemoPage = pathname === "/demo"
   const history = useHistory()
   const user = props.user
 
@@ -24,10 +25,9 @@ function Header(props) {
   }
 
   useEffect(() => {
-    return history.listen(() => {
-      updateNavOpenState(false)
-    })
-  }, [history])
+    document.body.scrollTo(0, 0)
+    updateNavOpenState(false)
+  }, [pathname])
 
   return (
     <Fragment>
