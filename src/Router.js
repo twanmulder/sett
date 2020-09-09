@@ -9,8 +9,6 @@ import Demo from "./pages/Demo/Demo"
 
 import Header from "./components/Header/Header"
 
-let hasDoneInit = false
-
 function Router() {
   const [user, setUser] = useState({
     stripePortalHref: null,
@@ -63,11 +61,8 @@ function Router() {
   netlifyIdentity.on("logout", handleUserStateChange)
 
   useEffect(() => {
-    if (!hasDoneInit) {
-      hasDoneInit = true
-      netlifyIdentity.init()
-    }
-  })
+    netlifyIdentity.init()
+  }, [])
 
   return (
     <BrowserRouter>
