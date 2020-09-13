@@ -25,7 +25,7 @@ function Header(props) {
   }
 
   useEffect(() => {
-    document.body.scrollTo(0, 0)
+    window.scrollTo(0, 0)
     updateNavOpenState(false)
   }, [pathname])
 
