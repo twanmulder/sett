@@ -97,7 +97,7 @@ function Header(props) {
               {!user.isPro && !isOnDemoPage && (
                 <li className="large-button">
                   <Link to="/demo" className="button button--ghost">
-                    Free demo
+                    Try for Free
                   </Link>
                 </li>
               )}
